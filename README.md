@@ -2,5 +2,7 @@
 #Dev
 
 1. Clonar el .env.template y crear el .env 
-2. Ejecutar `npm install`
-3. Ejecutar `npm run dev`
+2. Ejecutar el comando de dockercompose: 
+```
+docker-compose up -d
+```
