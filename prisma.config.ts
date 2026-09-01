@@ -1,9 +1,11 @@
 import 'dotenv/config';
-import { defineConfig } from 'prisma/config';
+import { defineConfig, env } from 'prisma/config';
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
   datasource: {
-    url: process.env.POSTGRES_URL || process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/postgres',
+    // Usamos DATABASE_URL que es la variable por defecto en Railway.
+    // Si no está disponible durante el build, usamos una de respaldo.
+    url: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/postgres',
   },
 });
