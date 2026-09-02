@@ -43,6 +43,7 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
   },
   "include": ["src/**/*"]

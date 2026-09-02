@@ -9,10 +9,12 @@ interface Options {
 
 export class Server {
 
-    private app = express();
+    public readonly app = express();
     private readonly port: number;
     private readonly publicPath: string;
     private readonly routes: Router;
+
+    private serverListener?: any;
 
     constructor(options: Options) {
         const { port, public_path = 'public', routes } = options;
@@ -43,8 +45,12 @@ export class Server {
         });
 
 
-        this.app.listen(this.port, () => {
-            console.log('Server running at http://localhost:3000/\n');
+        this.serverListener = this.app.listen(this.port, () => {
+            console.log(`Server running at http://localhost:${this.port}/\n`);
         });
+    }
+
+    public close() {
+        this.serverListener?.close();
     }
 }

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { TodosController } from "./controller.js";
-import { TodoDataSourceImpl } from "../../infrastructure/datasource/todo.datasource.impl.js";
-import { TodoRepositoryImpl } from "../../infrastructure/repositories/todo.repository.impl.js";
+import { TodosController } from "./controller";
+import { TodoDataSourceImpl } from "../../infrastructure/datasource/todo.datasource.impl";
+import { TodoRepositoryImpl } from "../../infrastructure/repositories/todo.repository.impl";
 
 
 

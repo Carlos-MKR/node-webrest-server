@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { TodoRoutes } from "./todos/routes.js";
+import { TodoRoutes } from "./todos/routes";
 
 
 
